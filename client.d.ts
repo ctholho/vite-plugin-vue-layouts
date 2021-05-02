@@ -4,3 +4,10 @@ declare module 'layouts-generated' {
   export function createRouterLayout(
     resolve: (layoutName: string) => Promise<Component | { default: Component }>)
 }
+
+declare module 'virtual:generated-layouts' {
+  import { RouteRecordRaw } from 'vue-router'
+  export function setupLayouts(routes: RouteRecordRaw[])
+  export function createRouterLayout(
+    resolve: (layoutName: string) => Promise<Component | { default: Component }>)
+}
